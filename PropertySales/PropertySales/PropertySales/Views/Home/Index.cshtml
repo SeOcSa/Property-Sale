@@ -1,0 +1,16 @@
+﻿@model IndexViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="row">
+    <div>
+        <br> <br>
+        <br> <br>
+        @foreach( var item in Model.PropertyInfos)
+        {
+            @Html.Partial("_Summary", item);
+
+        }
+    </div>
+</div>

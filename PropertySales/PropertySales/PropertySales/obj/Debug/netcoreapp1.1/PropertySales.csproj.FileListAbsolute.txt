@@ -1,0 +1,11 @@
+C:\work\PropertySales\PropertySales\PropertySales\bin\Debug\netcoreapp1.1\PropertySales.deps.json
+C:\work\PropertySales\PropertySales\PropertySales\bin\Debug\netcoreapp1.1\PropertySales.runtimeconfig.json
+C:\work\PropertySales\PropertySales\PropertySales\bin\Debug\netcoreapp1.1\PropertySales.runtimeconfig.dev.json
+C:\work\PropertySales\PropertySales\PropertySales\obj\Debug\netcoreapp1.1\PropertySales.csprojResolveAssemblyReference.cache
+C:\work\PropertySales\PropertySales\PropertySales\obj\Debug\netcoreapp1.1\PropertySales.AssemblyInfo.cs
+C:\work\PropertySales\PropertySales\PropertySales\bin\Debug\netcoreapp1.1\PropertySales.dll
+C:\work\PropertySales\PropertySales\PropertySales\bin\Debug\netcoreapp1.1\PropertySales.pdb
+C:\work\PropertySales\PropertySales\PropertySales\obj\Debug\netcoreapp1.1\PropertySales.dll
+C:\work\PropertySales\PropertySales\PropertySales\obj\Debug\netcoreapp1.1\PropertySales.pdb
+C:\work\PropertySales\PropertySales\PropertySales\bin\Debug\netcoreapp1.1\Data.dll
+C:\work\PropertySales\PropertySales\PropertySales\bin\Debug\netcoreapp1.1\Data.pdb
