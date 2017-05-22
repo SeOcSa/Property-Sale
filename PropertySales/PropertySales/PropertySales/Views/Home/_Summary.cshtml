@@ -5,10 +5,14 @@
         <img src="@Model.urlPhoto" style="width: 300px; height: 200px;">
         <div class="caption">
             <div class="">
-                <a class="btn btn-danger"asp-route-id="@Model.Id" asp-action="Details">Details</a>
+                <a class="btn btn-primary"asp-route-id="@Model.Id" asp-action="Details">Details</a>
                 @if (Model.IsAvailable)
                 {
                     <a class="btn btn-warning" asp-route-id="@Model.Id" asp-action="ConfirmBuy">Buy</a>
+                }
+                @if (User.IsInRole("Admin"))
+                {
+                    <a class="btn btn-danger" asp-route-id="@Model.Id" asp-action="Delete">Delete</a>
                 }
             </div>
         </div>

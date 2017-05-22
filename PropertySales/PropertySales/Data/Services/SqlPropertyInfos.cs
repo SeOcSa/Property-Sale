@@ -12,12 +12,23 @@ namespace Data.Services
         {
             _context = context;
         }
+        public void Add(PropertyDetails property)
+        {
+            _context.PropertyInfos.Add(property);
+            _context.SaveChanges();
+        }
         public void ChangeState(Guid id)
         {
             var property = _context.PropertyInfos.Where(x => x.Id.Equals(id)).FirstOrDefault();
             property.IsAvailable = false;
             _context.PropertyInfos.Update(property);
 
+            _context.SaveChanges();
+        }
+        public void Delete(Guid id)
+        {
+            var property=_context.PropertyInfos.Where(x=>x.Id.Equals(id)).FirstOrDefault();
+            _context.PropertyInfos.Remove(property);
             _context.SaveChanges();
         }
         public PropertyDetails get(Guid id)
@@ -28,7 +39,6 @@ namespace Data.Services
         {
             return _context.PropertyInfos.ToList();
         }
-
 
     }
 }

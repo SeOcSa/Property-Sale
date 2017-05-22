@@ -5,12 +5,13 @@
 }
 <div class="row">
     <div>
-        <br> <br>
-        <br> <br>
         @foreach( var item in Model.PropertyInfos)
         {
             @Html.Partial("_Summary", item);
 
         }
     </div>
+</div>
+<div class="row">
+    <a class="btn btn-block btn-primary" asp-action="Add">Add</a>
 </div>

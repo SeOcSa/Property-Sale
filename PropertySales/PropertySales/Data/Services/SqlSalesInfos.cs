@@ -16,6 +16,7 @@ namespace Data.Services
         public void Add(SaleDetails sale)
         {
             _context.SaleInfo.Add(sale);
+            _context.SaveChanges();
         }
     }
 }

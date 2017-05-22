@@ -11,5 +11,9 @@ namespace Data.Services
         PropertyDetails get(Guid id);
 
         void ChangeState(Guid id);
+
+        void Add(PropertyDetails property);
+
+        void Delete(Guid id);
     }
 }
