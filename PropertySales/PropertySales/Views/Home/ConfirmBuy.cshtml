@@ -1,0 +1,48 @@
+﻿@model ConfirmBuyViewModel
+
+@{
+    ViewBag.Title = "Confirm";
+}
+
+<div class="page-header">
+    <h1>Confirm buy</h1>
+</div>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="col-lg-12">
+            <h4>Tip</h4>
+            <p>@Model.PropertyInfos.Type<p>
+        </div>
+        <div class="col-lg-12">
+            <h4>Price</h4>
+            <p>@Model.PropertyInfos.Price<p>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6 col-md-3">
+                <a href="#" class="thumbnail">
+                    <img src="@Model.PropertyInfos.urlPhoto">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <a data-toggle="modal" data-target=".bs-example-modal-sm"  class="btn btn-primary">
+            <span> Confirm</span>
+        </a>
+        <a asp-action="@nameof(HomeController.Index)" class="btn btn-danger">
+            <span> Cancel</span>
+        </a>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <h4> Your request was send for processing!</h4>
+            <div class="modal-footer">
+                <a asp-action="@nameof(HomeController.saveChanges)" asp-route-id="@Model.PropertyInfos.Id" class="btn btn-primary">OK</a>
+            </div>
+        </div>
+    </div>
+</div>

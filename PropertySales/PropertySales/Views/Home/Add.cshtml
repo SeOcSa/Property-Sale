@@ -1,0 +1,68 @@
+﻿@model AddViewModel
+@{
+    ViewBag.Title = "Add";
+}
+<div class="page-header text-center">
+    <h2>Add</h2>
+</div>
+<form method="post" enctype="multipart/form-data" multiple="multiple" asp-action="Add" class="form-edit">
+    <div class="form-group">
+        <label asp-for="@Model.propertyInfos.Type">Type</label>
+        <select asp-for="@Model.propertyInfos.Type" class="form-control" id="Type">
+            <option>House</option>
+            <option>Flat</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.propertyInfos.Rooms">Rooms</label>
+        <select asp-for="@Model.propertyInfos.Rooms" class="form-control" id="Rooms">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="@Model.propertyInfos.Kitchen">Kitchen</label>
+        <select asp-for="@Model.propertyInfos.Kitchen" class="form-control" id="Kitchen">
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.propertyInfos.Bathroom">Bathroom</label>
+        <select asp-for="@Model.propertyInfos.Bathroom" class="form-control" id="Bathroom">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.propertyInfos.Surface" class="control-label"></label>
+        <textarea asp-for="@Model.propertyInfos.Surface" class="form-control"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="@Model.propertyInfos.Price" class="control-label"></label>
+        <textarea asp-for="@Model.propertyInfos.Price" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label asp-for="photosUrl">Photos</label>
+        <input type="file"asp-for="photosUrl" class="form-control-file" id="exampleInputFile" multiple>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label"></label>
+        <div class="col-md-6">
+            <input type="submit" value="Save" class="btn btn-primary btn-block" />
+        </div>
+        <div class="col-md-6">
+            <a asp-action="" class="btn btn-danger  btn-block">Cancel</a>
+        </div>
+    </div>
+</form>

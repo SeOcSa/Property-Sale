@@ -1,0 +1,16 @@
+﻿@model PropertyDetails
+
+<div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+        <img src="@Model.urlPhoto" style="width: 300px; height: 200px;">
+        <div class="caption">
+            <div class="">
+                <a class="btn btn-danger"asp-route-id="@Model.Id" asp-action="Details">Details</a>
+                @if (Model.IsAvailable)
+                {
+                    <a class="btn btn-warning" asp-route-id="@Model.Id" asp-action="ConfirmBuy">Buy</a>
+                }
+            </div>
+        </div>
+    </div>
+</div>

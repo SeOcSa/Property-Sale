@@ -1,0 +1,85 @@
+﻿@model PropertyDetails
+
+@{ 
+    ViewBag.Title = "Details";
+}
+<div class="page-header">
+    <h1>Details</h1>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="col-lg-12">
+            <h4>Type</h4>
+            <p>@Model.Type</p>
+        </div>
+        <div class="col-lg-12">
+            <h4>Rooms</h4>
+            <p>@Model.Rooms</p>
+        </div>
+        <div class="col-lg-12">
+            <h4>Kitchen</h4>
+            @if (Model.Kitchen)
+            {
+            <p>Yes</p>
+            }
+            else
+            {
+                <p>No</p>
+            }
+        </div>
+        <div class="col-lg-12">
+            <h4>Bathroom</h4>
+            <p>@Model.Bathroom</p>
+        </div>
+        <div class="col-lg-12">
+            <h4>Surface</h4>
+            <p>@Model.Surface</p>
+        </div>
+        <div class="col-lg-12">
+            <h4>IsAvailable</h4>
+            @if (Model.IsAvailable)
+            {
+                <p>Yes</p>
+            }
+            else
+            {
+                <p>No</p>
+            }
+
+        </div>
+        <div class="col-lg-12">
+            <h4>Price ($)</h4>
+            <p>@Model.Price</p>
+        </div>
+
+        <div class="col">
+            <div class="col-xs-6 col-md-3">
+                <a href="#" class="thumbnail">
+                    <img src="@Model.urlPhoto" alt="...">
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-xs-6 col-md-3">
+                <a href="#" class="thumbnail">
+                    <img src="@Model.urlPhoto2" alt="...">
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-xs-6 col-md-3">
+                <a href="#" class="thumbnail">
+                    <img src="@Model.urlPhoto3" alt="...">
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-xs-6 col-md-3">
+                <a href="#" class="thumbnail">
+                    <img src="@Model.urlPhoto4" alt="...">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
