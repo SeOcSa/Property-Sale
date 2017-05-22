@@ -83,8 +83,6 @@ namespace PropertySales.Controllers
 
             return RedirectToAction("Index");
         }
-
-
         [HttpGet]
         [Authorize(Roles ="Admin")]
         public IActionResult Add()
@@ -94,8 +92,6 @@ namespace PropertySales.Controllers
         [HttpPost]
         public IActionResult Add(AddViewModel model)
         {
-
-
             var addModel = new PropertyDetails
             {
                 Id = Guid.NewGuid(),
@@ -113,6 +109,22 @@ namespace PropertySales.Controllers
             };
 
             _propertyInfos.Add(addModel);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult Delete(Guid id)
+        {
+            var model = new ConfirmBuyViewModel
+            {
+                PropertyInfos=_propertyInfos.get(id)
+            };
+            return View(model);
+        }
+        [HttpPost]
+        public IActionResult Delete(Guid id, string name=null)
+        {
+            _propertyInfos.Delete(id);
             return RedirectToAction("Index");
         }
     }
